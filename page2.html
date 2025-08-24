@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet & Workout Plan Generator</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Average+Sans:wght@400&family=Averia+Sans+Libre:wght@400&family=Bowlby+One&family=Average:wght@400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="page2.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Background Gradients -->
+        <div class="bg-gradients">
+            <div class="gradient gradient-1"></div>
+            <div class="gradient gradient-2"></div>
+            <div class="gradient gradient-3"></div>
+            <div class="gradient gradient-4"></div>
+        </div>
+
+        <!-- Header -->
+
+        <header>
+            <div class="header-content">
+                <!-- logo -->
+                <div class="nav-brand">
+                    <h1 class="logo">VIRTUFIT</h1>
+                </div>
+                <!-- button -->
+                <div class="home-button">
+                    <button onclick="location.href='index.html'" class="home-button-bg">HOME</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <div class="hero">
+                <h1>Lets Start</h1>
+                <p>Fill the data below to get your required</p>
+                <h2>Diet & Workout Plan</h2>
+            </div>
+
+            <!-- Energy Section -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">For knowing your Energy</div>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="occupinput" placeholder="Enter your occupation">
+                </div>
+            </div>
+
+            <!-- Medical Needs Section -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">Medical Needs</div>
+                <div class="divider-line"></div>
+            </div>
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="geninput" placeholder="Enter your gender(Male/Female)">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="ageinput" placeholder="Enter your age">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="wtinput" placeholder="Enter your weight(in kg)">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="htinput" placeholder="Enter your height(in cm)">
+                </div>
+            </div>
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="sleepinput" placeholder="Enter your sleep time(in hours)">
+                </div>
+            </div>
+
+            <!-- Goals Section -->
+            <div class="section-divider">
+                <div class="divider-line"></div>
+                <div class="divider-text">For knowing your Goals</div>
+                <div class="divider-line"></div>
+            </div>
+
+
+            <div class="form-field">
+                <div class="form-field-container">
+                    <div class="form-field-label"></div>
+                    <input type="text" id="goalinput" placeholder="Enter your body goals using below options">
+                </div>
+            </div>
+
+            <div class="form-fieldo">
+                <div class="form-fieldo-container">
+                    <div class="form-fieldo-label">
+                        <p>
+                            <li><b>Fat Loss –</b> Burn fat and slim down.</li><br>
+                            <li><b>Muscle Gain –</b> Build muscle size and strength.</li><br>
+                            <li><b>Body Recomposition –</b> Lose fat while gaining muscle.</li><br>
+                            <li><b>Strength Building –</b> Focus on lifting heavier and improving raw strength.</li><br>
+                            <li><b>Endurance & Stamina –</b> Improve cardiovascular health and long-term energy.</li>
+                            <br>
+                            <li><b>Toning & Definition –</b> Get a lean, sculpted look.</li><br>
+                            <li><b>Flexibility & Mobility –</b> Improve range of motion and prevent injuries.</li><br>
+                            <li><b>Athletic Performance –</b> Train for sports, agility, and speed.</li><br>
+                            <li><b>Core & Posture Improvement –</b> Strengthen abs, lower back, and alignment.</li><br>
+                            <li><b>General Fitness & Wellness –</b> Stay active, healthy, and energized.</li><br>
+                            <li><b>Mental Health & Stress Relief –</b> Workouts focused on relaxation, yoga, or
+                                mindfulness.
+                            </li><br>
+                            <li><b>Healthy Aging –</b> Maintain mobility, balance, and strength with age.</li><br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generate Section -->
+            <div class="generate-section">
+                <div class="generate-divider">
+                    <div class="divider-line"></div>
+                    <div class="divider-text">Click Below</div>
+                    <div class="divider-line"></div>
+                </div>
+                <button class="generate-button" onclick="generateResult()">Generate</button>
+            </div>
+
+            <!-- chatbot -->
+            
+
+
+            <!-- resultarea -->
+            <div class="result-field">
+                <div class="result-field-container" id="output"></div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-gradient">
+                <div class="footer-content">
+                    <h3>Thank You For Visit</h3>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="page2.js"></script>
+</body>
+
+</html>
