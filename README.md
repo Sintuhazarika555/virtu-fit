@@ -1,7 +1,4 @@
 # VIRTUFIT — Virtual Fitness Assistant
-
-**Live Demo:** [https://virtu-fit.netlify.app](https://virtu-fit.netlify.app)
-
 ---
 
 ## 🚀 Overview
