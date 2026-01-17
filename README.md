@@ -11,14 +11,16 @@ Whether you’re aiming for better health or building your fitness brand, VIRTUF
 
 ---
 ## ScreenShots
-Home Page
+<h5 align="center">Home Page</h5>
 <p align="center">
-  <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2026-01-17 175027.png" alt="App Screenshot" width="500">
+  <img src="https://raw.githubusercontent.com/Sintuhazarika555/virtu-fit/refs/heads/main/Screenshot%202026-01-17%20175027.png" alt="App Screenshot" width="500">
 </p>
-Output Page
+<h5 align="center">Output Page</h5>
 <p align="center">
-  <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2026-01-17 175122.png" alt="App Screenshot" width="500">
+  <img src="https://raw.githubusercontent.com/Sintuhazarika555/virtu-fit/refs/heads/main/Screenshot%202026-01-17%20175122.png" alt="App Screenshot" width="500">
 </p>
+
+---
 
 ## ✨ Features 👤 Client Experience
 - Personalized diet & fitness plans based on goals, energy, sleep, and routine.
