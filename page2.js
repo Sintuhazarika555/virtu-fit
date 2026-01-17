@@ -1,4 +1,4 @@
-
+// function vala hissa
 async function generateResult() {
   const gender = document.getElementById("geninput").value;
   const occu = document.getElementById("occupinput").value;
@@ -6,16 +6,29 @@ async function generateResult() {
   const wt = document.getElementById("wtinput").value;
   const ht = document.getElementById("htinput").value;
   const sleep = document.getElementById("sleepinput").value;
+  const diet = document.getElementById("dietinput").value;
+  const extra = document.getElementById("extrainput").value;
   const goal = document.getElementById("goalinput").value;
 
-  const prompt = `I am a ${gender} ${occu}, with age of ${age} years, weight of ${wt} kg 
+
+
+  const prompt = `I am a ${diet} ${gender} ${occu}, with age of ${age} years, weight of ${wt} kg 
     and height of ${ht} cm. I sleep for ${sleep} hours daily and I can't change my sleep cycle.
-    My body goal is ${goal}. Generate only workout plan and Diet plan for me to achieve my body goals. give data in below format:
-    Calculations and Assumptions: (include BMR, TDEE, and any other relevant calculations.)
-    Daily Caloric Needs: (calculated daily caloric needs based on TDEE and body goals.)
-    Meal plan: (genrated meal plan.)
-    Workout plan: (generated workout plan.)
-    Additional Tips: (generated tips.)`;
+    My body goal is ${goal}.  and also my personal issues are ${extra}. Generate only workout plan and 
+    Diet plan for me to achieve my body goals. give data in below format in tabular form.:
+    _________________________________________________________________________________________
+    |Calculations and Assumptions: (include BMR, TDEE, and any other relevant calculations.) |
+    |________________________________________________________________________________________|
+    |Daily Caloric Needs: (calculated daily caloric needs based on TDEE and body goals.)     |
+    |________________________________________________________________________________________|
+    |Meal plan: (genrated meal plan.)                                                        |
+    |________________________________________________________________________________________|
+    |Workout plan: (generated workout plan.)                                                 |
+    |________________________________________________________________________________________|
+    |Additional Tips: (generated tips.)                                                      |
+    |________________________________________________________________________________________|
+    `;
+
 
   const outputDiv = document.getElementById("output");
   outputDiv.innerHTML = "⏳ Generating Result...";
@@ -25,33 +38,33 @@ async function generateResult() {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": "Bearer YOUR_API_KEY_HERE" // ⚠️ Replace with your key
+        // key yaha dalna
+        "Authorization": "Bearer (api_key)"
       },
       body: JSON.stringify({
-        model: "meta-llama/llama-4-scout-17b-16e-instruct",
+        //Use a valid model name
+        model: "model_name",
         messages: [{ role: "user", content: prompt }]
       })
     });
 
     const data = await response.json();
 
-    // Raw response
-    const rawResult = data.choices[0].message.content;
+    if (data.choices && data.choices[0]) {
+      const rawResult = data.choices[0].message.content;
+      outputDiv.innerHTML = rawResult.replace(/\n/g, "<br>");
+    } 
+    else {
+      outputDiv.innerHTML = "❌ Error: " + (data.error ? data.error.message : "Invalid response");
+    }} 
 
-
-    // format: line breaks 
-    const formattedResult = rawResult
-      .replace(/\n/g, "<br>")
-
-    outputDiv.innerHTML = formattedResult;
-
-
-  } catch (error) {
-    outputDiv.innerHTML = "❌ Error: " + error.message;
+  
+  catch (error) {
+    outputDiv.innerHTML = "❌ Network Error: " + error.message;
   }
 }
 
-// Attach to button click
+// main code -------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".generate-button").addEventListener("click", generateResult);
 });
