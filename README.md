@@ -10,6 +10,15 @@ VIRTUFIT is a modern, mobile-first web application designed to help both **clien
 Whether you’re aiming for better health or building your fitness brand, VIRTUFIT adapts to your schedule, energy levels, and lifestyle to make wellness accessible anytime, anywhere.
 
 ---
+## ScreenShots
+Home Page
+<p align="center">
+  <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2026-01-17 175027.png" alt="App Screenshot" width="500">
+</p>
+Output Page
+<p align="center">
+  <img src="D:\OneDrive\Pictures\Screenshots\Screenshot 2026-01-17 175122.png" alt="App Screenshot" width="500">
+</p>
 
 ## ✨ Features 👤 Client Experience
 - Personalized diet & fitness plans based on goals, energy, sleep, and routine.
