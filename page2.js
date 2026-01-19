@@ -12,21 +12,30 @@ async function generateResult() {
 
 
 
-  const prompt = `I am a ${diet} ${gender} ${occu}, with age of ${age} years, weight of ${wt} kg 
-    and height of ${ht} cm. I sleep for ${sleep} hours daily and I can't change my sleep cycle.
-    My body goal is ${goal}.  and also my personal issues are ${extra}. Generate only workout plan and 
-    Diet plan for me to achieve my body goals. give data in below format in tabular form.:
-    _________________________________________________________________________________________
-    |Calculations and Assumptions: (include BMR, TDEE, and any other relevant calculations.) |
-    |________________________________________________________________________________________|
-    |Daily Caloric Needs: (calculated daily caloric needs based on TDEE and body goals.)     |
-    |________________________________________________________________________________________|
-    |Meal plan: (genrated meal plan.)                                                        |
-    |________________________________________________________________________________________|
-    |Workout plan: (generated workout plan.)                                                 |
-    |________________________________________________________________________________________|
-    |Additional Tips: (generated tips.)                                                      |
-    |________________________________________________________________________________________|
+  const prompt = `I am a ${diet} ${gender} working as a ${occu}, aged ${age} years, weighing ${wt} kg and ${ht} cm tall.
+I sleep ${sleep} hours per day, and I am unable to change my sleep schedule.
+My primary fitness goal is ${goal}, and I also have the following personal issues or limitations: ${extra}.
+
+Based on this information, generate ONLY a Workout Plan and a Diet Plan to help me achieve my body goal.
+
+The response MUST be presented strictly in the following tabular format:
+
+_________________________________________________________________________________________
+| Calculations and Assumptions:                                                          |
+| - Include BMR, TDEE, and any other relevant calculations with brief explanations.     |
+|________________________________________________________________________________________|
+| Daily Caloric Needs:                                                                  |
+| - Clearly state calculated daily calorie intake based on TDEE and body goals.        |
+|________________________________________________________________________________________|
+| Meal Plan:                                                                            |
+| - Provide a structured daily meal plan aligned with my diet type and calorie needs. |
+|________________________________________________________________________________________|
+| Workout Plan:                                                                         |
+| - Provide a weekly workout schedule tailored to my goal and limitations.            |
+|________________________________________________________________________________________|
+| Additional Tips:                                                                      |
+| - Include practical tips related to recovery, hydration, consistency, and safety.   |
+|________________________________________________________________________________________|
     `;
 
 
@@ -68,4 +77,5 @@ async function generateResult() {
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".generate-button").addEventListener("click", generateResult);
 });
+
 
