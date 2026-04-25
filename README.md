@@ -1,4 +1,5 @@
 # VIRTUFIT — Virtual Fitness Assistant
+GenAI Project 
 ---
 
 ## 🚀 Overview
