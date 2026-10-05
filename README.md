@@ -1,6 +1,6 @@
 # VIRTUFIT — Virtual Fitness Assistant
 
-A full-stack GenAI application integrated with the Groq API to deliver high-performance,real time LLM-generated responses.
+A full-stack **GenAI** application integrated with the **Groq** API to deliver high-performance,real time **LLM-generated** responses.
 
 ---
 
